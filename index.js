@@ -19,7 +19,7 @@ Parse.serverURL = process.env.PUBLIC_SERVER_URL;
 Parse.Cloud.useMasterKey();
 
 setInterval(function() { 
-  Parse.Cloud.run('updateRecurringSessions', {}, {
+  Parse.Cloud.run('refreshRecurringSessions', {}, {
 					  success: function(success) {
 					   console.log("Sent")
 					  },
