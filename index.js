@@ -1,5 +1,5 @@
 var express = require('express')
-var Parse = require('parse').Parse;
+var Parse = require('parse/node').Parse;
 
 var app = express()
 
