@@ -16,11 +16,16 @@ app.get('/', function(request, response) {
 
 Parse.initialize(process.env.APPLICATION_ID, process.env.MASTER_KEY);
 console.log("MY LOG" + Parse);
-
-// setInterval(function() { 
-//   var items = ["Aram","Please","Help"]
-//   var item = items[Math.floor(Math.random()*items.length)]
-//   console.log(item) }, 5000)
+ 
+setInterval(function() { 
+  Parse.Cloud.run('updateRecurringSessions', {}, {
+					  success: function(success) {
+					    // ratings should be 4.5
+					  },
+					  error: function(error) {
+					  }
+					});
+  console.log(item) }, 10000)
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
