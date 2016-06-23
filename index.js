@@ -4,8 +4,11 @@ var app = express()
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 
+
 app.get('/', function(request, response) {
-  response.send('Hello World!')
+  var items = ["a","e","i","o","u"]
+  var item = items[Math.floor(Math.random()*items.length)];
+  response.send(item)
 })
 
 app.listen(app.get('port'), function() {
