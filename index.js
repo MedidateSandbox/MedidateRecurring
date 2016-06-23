@@ -15,6 +15,8 @@ app.get('/', function(request, response) {
 })
 
 Parse.initialize(process.env.APPLICATION_ID, process.env.MASTER_KEY);
+Parse.serverURL = 'https://medidate.herokuapp.com/';
+Parse.Cloud.useMasterKey();
 console.log("MY LOG" + Parse);
  
  console.log("APPID " + process.env.APPLICATION_ID)
