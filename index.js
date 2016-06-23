@@ -17,6 +17,8 @@ app.get('/', function(request, response) {
 Parse.initialize(process.env.APPLICATION_ID, "",process.env.MASTER_KEY);
 console.log("MY LOG" + Parse);
  
+ console.log("APPID " + process.env.APPLICATION_ID)
+ console.log("MASTERY KEY " + process.env.MASTER_KEY)
 setInterval(function() { 
   Parse.Cloud.run('updateRecurringSessions', {}, {
 					  success: function(success) {
