@@ -21,7 +21,7 @@ Parse.Cloud.useMasterKey();
 setInterval(function() { 
   Parse.Cloud.run('updateRecurringSessions', {}, {
 					  success: function(success) {
-					   console.log("Sent" + error)
+					   console.log("Sent")
 					  },
 					  error: function(error) {
 					  	console.log("Error " + error.message)
