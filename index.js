@@ -14,7 +14,7 @@ app.get('/', function(request, response) {
   response.send(item)
 })
 
-Parse.initialize(process.env.APPLICATION_ID, "",process.env.MASTER_KEY);
+Parse.initialize(process.env.APPLICATION_ID, process.env.MASTER_KEY);
 console.log("MY LOG" + Parse);
  
  console.log("APPID " + process.env.APPLICATION_ID)
