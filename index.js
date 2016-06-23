@@ -3,9 +3,7 @@ var Parse = require('parse').Parse;
 
 var app = express()
 
-Parse.initialize(process.env.APPLICATION_ID, process.env.MASTER_KEY);
 
-console.log(Parse);
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 
@@ -15,6 +13,9 @@ app.get('/', function(request, response) {
   var item = items[Math.floor(Math.random()*items.length)];
   response.send(item)
 })
+
+Parse.initialize(process.env.APPLICATION_ID, process.env.MASTER_KEY);
+console.log(Parse);
 
 // setInterval(function() { 
 //   var items = ["Aram","Please","Help"]
