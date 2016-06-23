@@ -15,7 +15,7 @@ app.get('/', function(request, response) {
 })
 
 Parse.initialize(process.env.APPLICATION_ID, process.env.MASTER_KEY);
-console.log(Parse);
+console.log("MY LOG" + Parse);
 
 // setInterval(function() { 
 //   var items = ["Aram","Please","Help"]
