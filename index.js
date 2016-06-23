@@ -23,7 +23,7 @@ setInterval(function() {
 					   console.log("Sent" + error)
 					  },
 					  error: function(error) {
-					  	console.log("Error" + error.message)
+					  	console.log("Error " + error.message)
 					  }
 					});
    }, 10000)
