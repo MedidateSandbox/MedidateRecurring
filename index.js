@@ -11,7 +11,10 @@ app.get('/', function(request, response) {
   response.send(item)
 })
 
-setInterval(function() { console.log("Goodbye") }, 5000)
+setInterval(function() { 
+  var items = ["Aram","Please","Help"]
+  var item = items[Math.floor(Math.random()*items.length)]
+  console.log(item) }, 5000)
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
