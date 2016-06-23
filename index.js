@@ -14,16 +14,16 @@ app.get('/', function(request, response) {
   response.send(item)
 })
 
-Parse.initialize(process.env.APPLICATION_ID, process.env.MASTER_KEY);
+Parse.initialize(process.env.APPLICATION_ID, "");
 console.log("MY LOG" + Parse);
  
 setInterval(function() { 
   Parse.Cloud.run('updateRecurringSessions', {}, {
 					  success: function(success) {
-					   console.log("Sent")
+					   console.log("Sent" + error)
 					  },
 					  error: function(error) {
-					  	console.log("Sent" + error)
+					  	console.log("Error" + error)
 					  }
 					});
    }, 10000)
