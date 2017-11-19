@@ -27,7 +27,7 @@ setInterval(function() {
 					  	console.log("Error " + error.message)
 					  }
 					});
-   },300000 )//300000 5 * 60000)
+   },60000 )//300000 5 * 60000)
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
