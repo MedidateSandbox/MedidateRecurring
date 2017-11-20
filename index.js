@@ -16,10 +16,10 @@ app.get('/', function(request, response) {
 
 Parse.initialize(process.env.APPLICATION_ID,"", process.env.MASTER_KEY);
 Parse.serverURL = process.env.PUBLIC_SERVER_URL;
-Parse.Cloud.useMasterKey();
+// Parse.Cloud.useMasterKey();
 
 setInterval(function() { 
-  Parse.Cloud.run('refreshRecurringSessions', {}, {
+  Parse.Cloud.run('refreshRecurringSessions', { useMasterKey: true }, {
 					  success: function(success) {
 					   console.log("Sent")
 					  },
