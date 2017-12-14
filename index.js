@@ -23,15 +23,15 @@ setInterval(function() {
         useMasterKey: true,
         success: function(success) {
             console.log("Started Reoccurring Method")
-            Parse.Cloud.run('sendAlertToSessionSubscribers', {}, {
-                useMasterKey: true,
-                success: function(success) {
-                    console.log("Started Alerts Method")
-                },
-                error: function(error) {
-                    console.log("Error " + error.message)
-                }
-            });
+//             Parse.Cloud.run('sendAlertToSessionSubscribers', {}, {
+//                 useMasterKey: true,
+//                 success: function(success) {
+//                     console.log("Started Alerts Method")
+//                 },
+//                 error: function(error) {
+//                     console.log("Error " + error.message)
+//                 }
+//             });
         },
         error: function(error) {
             console.log("Error " + error.message)
